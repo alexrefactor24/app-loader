@@ -28,402 +28,438 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SetupForm));
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.devicesText = new System.Windows.Forms.TextBox();
-            this.connectButton = new System.Windows.Forms.Button();
-            this.ipText = new System.Windows.Forms.MaskedTextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.receptorText = new System.Windows.Forms.TextBox();
-            this.packageText = new System.Windows.Forms.TextBox();
-            this.apkLink = new System.Windows.Forms.LinkLabel();
-            this.searchButton = new System.Windows.Forms.Button();
-            this.listButton = new System.Windows.Forms.Button();
-            this.apkText = new System.Windows.Forms.TextBox();
-            this.ipLabel = new System.Windows.Forms.Label();
-            this.apkOpenFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.installButton = new System.Windows.Forms.Button();
-            this.cancelButton = new System.Windows.Forms.Button();
-            this.emptyErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
-            this.deviceOwnerButton = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.connectCheck = new System.Windows.Forms.CheckBox();
-            this.deviceOwnerCheck = new System.Windows.Forms.CheckBox();
-            this.installCheck = new System.Windows.Forms.CheckBox();
-            this.searchCheck = new System.Windows.Forms.CheckBox();
-            this.listCheck = new System.Windows.Forms.CheckBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.logText = new System.Windows.Forms.TextBox();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.newButton = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.emptyErrorProvider)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.groupBox2.SuspendLayout();
-            this.SuspendLayout();
+            groupBox1 = new GroupBox();
+            label1 = new Label();
+            textBox1 = new TextBox();
+            button1 = new Button();
+            label5 = new Label();
+            devicesText = new TextBox();
+            connectButton = new Button();
+            ipText = new MaskedTextBox();
+            apkLink = new LinkLabel();
+            receptorText = new TextBox();
+            searchButton = new Button();
+            listButton = new Button();
+            apkText = new TextBox();
+            ipLabel = new Label();
+            packageText = new TextBox();
+            apkOpenFileDialog = new OpenFileDialog();
+            installButton = new Button();
+            cancelButton = new Button();
+            emptyErrorProvider = new ErrorProvider(components);
+            deviceOwnerButton = new Button();
+            panel1 = new Panel();
+            connectCheck = new CheckBox();
+            deviceOwnerCheck = new CheckBox();
+            installCheck = new CheckBox();
+            searchCheck = new CheckBox();
+            listCheck = new CheckBox();
+            label4 = new Label();
+            pictureBox1 = new PictureBox();
+            groupBox2 = new GroupBox();
+            logText = new TextBox();
+            newButton = new Button();
+            fileSystemWatcher1 = new FileSystemWatcher();
+            toolTip1 = new ToolTip(components);
+            groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)emptyErrorProvider).BeginInit();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)fileSystemWatcher1).BeginInit();
+            SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.devicesText);
-            this.groupBox1.Controls.Add(this.connectButton);
-            this.groupBox1.Controls.Add(this.ipText);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.receptorText);
-            this.groupBox1.Controls.Add(this.packageText);
-            this.groupBox1.Controls.Add(this.apkLink);
-            this.groupBox1.Controls.Add(this.searchButton);
-            this.groupBox1.Controls.Add(this.listButton);
-            this.groupBox1.Controls.Add(this.apkText);
-            this.groupBox1.Controls.Add(this.ipLabel);
-            this.groupBox1.Location = new System.Drawing.Point(247, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(622, 353);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Parámetros";
+            resources.ApplyResources(groupBox1, "groupBox1");
+            groupBox1.Controls.Add(label1);
+            groupBox1.Controls.Add(textBox1);
+            groupBox1.Controls.Add(button1);
+            groupBox1.Controls.Add(label5);
+            groupBox1.Controls.Add(devicesText);
+            groupBox1.Controls.Add(connectButton);
+            groupBox1.Controls.Add(ipText);
+            groupBox1.Controls.Add(apkLink);
+            groupBox1.Controls.Add(receptorText);
+            groupBox1.Controls.Add(searchButton);
+            groupBox1.Controls.Add(listButton);
+            groupBox1.Controls.Add(apkText);
+            groupBox1.Controls.Add(ipLabel);
+            emptyErrorProvider.SetError(groupBox1, resources.GetString("groupBox1.Error"));
+            emptyErrorProvider.SetIconAlignment(groupBox1, (ErrorIconAlignment)resources.GetObject("groupBox1.IconAlignment"));
+            emptyErrorProvider.SetIconPadding(groupBox1, (int)resources.GetObject("groupBox1.IconPadding"));
+            groupBox1.Name = "groupBox1";
+            groupBox1.TabStop = false;
+            toolTip1.SetToolTip(groupBox1, resources.GetString("groupBox1.ToolTip"));
+            groupBox1.Enter += groupBox1_Enter;
+            // 
+            // label1
+            // 
+            resources.ApplyResources(label1, "label1");
+            emptyErrorProvider.SetError(label1, resources.GetString("label1.Error"));
+            emptyErrorProvider.SetIconAlignment(label1, (ErrorIconAlignment)resources.GetObject("label1.IconAlignment"));
+            emptyErrorProvider.SetIconPadding(label1, (int)resources.GetObject("label1.IconPadding"));
+            label1.Name = "label1";
+            toolTip1.SetToolTip(label1, resources.GetString("label1.ToolTip"));
+            // 
+            // textBox1
+            // 
+            resources.ApplyResources(textBox1, "textBox1");
+            textBox1.BackColor = SystemColors.Window;
+            textBox1.BorderStyle = BorderStyle.None;
+            emptyErrorProvider.SetError(textBox1, resources.GetString("textBox1.Error"));
+            emptyErrorProvider.SetIconAlignment(textBox1, (ErrorIconAlignment)resources.GetObject("textBox1.IconAlignment"));
+            emptyErrorProvider.SetIconPadding(textBox1, (int)resources.GetObject("textBox1.IconPadding"));
+            textBox1.Name = "textBox1";
+            textBox1.ReadOnly = true;
+            toolTip1.SetToolTip(textBox1, resources.GetString("textBox1.ToolTip"));
+            textBox1.TextChanged += textBox1_TextChanged;
+            // 
+            // button1
+            // 
+            resources.ApplyResources(button1, "button1");
+            emptyErrorProvider.SetError(button1, resources.GetString("button1.Error"));
+            emptyErrorProvider.SetIconAlignment(button1, (ErrorIconAlignment)resources.GetObject("button1.IconAlignment"));
+            emptyErrorProvider.SetIconPadding(button1, (int)resources.GetObject("button1.IconPadding"));
+            button1.Name = "button1";
+            toolTip1.SetToolTip(button1, resources.GetString("button1.ToolTip"));
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(35, 44);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(92, 20);
-            this.label5.TabIndex = 17;
-            this.label5.Text = "Dispositivos:";
+            resources.ApplyResources(label5, "label5");
+            emptyErrorProvider.SetError(label5, resources.GetString("label5.Error"));
+            emptyErrorProvider.SetIconAlignment(label5, (ErrorIconAlignment)resources.GetObject("label5.IconAlignment"));
+            emptyErrorProvider.SetIconPadding(label5, (int)resources.GetObject("label5.IconPadding"));
+            label5.Name = "label5";
+            toolTip1.SetToolTip(label5, resources.GetString("label5.ToolTip"));
             // 
             // devicesText
             // 
-            this.devicesText.BackColor = System.Drawing.SystemColors.Window;
-            this.devicesText.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.devicesText.Location = new System.Drawing.Point(133, 44);
-            this.devicesText.Multiline = true;
-            this.devicesText.Name = "devicesText";
-            this.devicesText.ReadOnly = true;
-            this.devicesText.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.devicesText.Size = new System.Drawing.Size(374, 137);
-            this.devicesText.TabIndex = 16;
+            resources.ApplyResources(devicesText, "devicesText");
+            devicesText.BackColor = SystemColors.Window;
+            devicesText.BorderStyle = BorderStyle.None;
+            emptyErrorProvider.SetError(devicesText, resources.GetString("devicesText.Error"));
+            emptyErrorProvider.SetIconAlignment(devicesText, (ErrorIconAlignment)resources.GetObject("devicesText.IconAlignment"));
+            emptyErrorProvider.SetIconPadding(devicesText, (int)resources.GetObject("devicesText.IconPadding"));
+            devicesText.Name = "devicesText";
+            devicesText.ReadOnly = true;
+            toolTip1.SetToolTip(devicesText, resources.GetString("devicesText.ToolTip"));
+            devicesText.TextChanged += devicesText_TextChanged;
             // 
             // connectButton
             // 
-            this.connectButton.Location = new System.Drawing.Point(267, 187);
-            this.connectButton.Name = "connectButton";
-            this.connectButton.Size = new System.Drawing.Size(94, 29);
-            this.connectButton.TabIndex = 15;
-            this.connectButton.Text = "Conectar";
-            this.connectButton.UseVisualStyleBackColor = true;
-            this.connectButton.Click += new System.EventHandler(this.connectButton_Click);
+            resources.ApplyResources(connectButton, "connectButton");
+            emptyErrorProvider.SetError(connectButton, resources.GetString("connectButton.Error"));
+            emptyErrorProvider.SetIconAlignment(connectButton, (ErrorIconAlignment)resources.GetObject("connectButton.IconAlignment"));
+            emptyErrorProvider.SetIconPadding(connectButton, (int)resources.GetObject("connectButton.IconPadding"));
+            connectButton.Name = "connectButton";
+            toolTip1.SetToolTip(connectButton, resources.GetString("connectButton.ToolTip"));
+            connectButton.UseVisualStyleBackColor = true;
+            connectButton.Click += connectButton_Click;
             // 
             // ipText
             // 
-            this.ipText.Location = new System.Drawing.Point(133, 189);
-            this.ipText.Name = "ipText";
-            this.ipText.Size = new System.Drawing.Size(129, 27);
-            this.ipText.TabIndex = 14;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(58, 307);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 20);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "Receptor:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(65, 271);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 20);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "Paquete:";
-            // 
-            // receptorText
-            // 
-            this.receptorText.BackColor = System.Drawing.SystemColors.Window;
-            this.receptorText.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.receptorText.Location = new System.Drawing.Point(133, 307);
-            this.receptorText.Name = "receptorText";
-            this.receptorText.ReadOnly = true;
-            this.receptorText.Size = new System.Drawing.Size(230, 20);
-            this.receptorText.TabIndex = 11;
-            // 
-            // packageText
-            // 
-            this.packageText.BackColor = System.Drawing.SystemColors.Window;
-            this.packageText.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.packageText.Location = new System.Drawing.Point(133, 271);
-            this.packageText.Name = "packageText";
-            this.packageText.ReadOnly = true;
-            this.packageText.Size = new System.Drawing.Size(230, 20);
-            this.packageText.TabIndex = 10;
+            resources.ApplyResources(ipText, "ipText");
+            emptyErrorProvider.SetError(ipText, resources.GetString("ipText.Error"));
+            emptyErrorProvider.SetIconAlignment(ipText, (ErrorIconAlignment)resources.GetObject("ipText.IconAlignment"));
+            emptyErrorProvider.SetIconPadding(ipText, (int)resources.GetObject("ipText.IconPadding"));
+            ipText.Name = "ipText";
+            toolTip1.SetToolTip(ipText, resources.GetString("ipText.ToolTip"));
             // 
             // apkLink
             // 
-            this.apkLink.AutoSize = true;
-            this.apkLink.Location = new System.Drawing.Point(17, 231);
-            this.apkLink.Name = "apkLink";
-            this.apkLink.Size = new System.Drawing.Size(113, 20);
-            this.apkLink.TabIndex = 9;
-            this.apkLink.TabStop = true;
-            this.apkLink.Text = "APK Aplicación:";
-            this.apkLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.apkLink_LinkClicked);
+            resources.ApplyResources(apkLink, "apkLink");
+            emptyErrorProvider.SetError(apkLink, resources.GetString("apkLink.Error"));
+            emptyErrorProvider.SetIconAlignment(apkLink, (ErrorIconAlignment)resources.GetObject("apkLink.IconAlignment"));
+            emptyErrorProvider.SetIconPadding(apkLink, (int)resources.GetObject("apkLink.IconPadding"));
+            apkLink.Name = "apkLink";
+            apkLink.TabStop = true;
+            toolTip1.SetToolTip(apkLink, resources.GetString("apkLink.ToolTip"));
+            apkLink.LinkClicked += apkLink_LinkClicked;
+            // 
+            // receptorText
+            // 
+            resources.ApplyResources(receptorText, "receptorText");
+            receptorText.BackColor = SystemColors.Window;
+            receptorText.BorderStyle = BorderStyle.None;
+            emptyErrorProvider.SetError(receptorText, resources.GetString("receptorText.Error"));
+            emptyErrorProvider.SetIconAlignment(receptorText, (ErrorIconAlignment)resources.GetObject("receptorText.IconAlignment"));
+            emptyErrorProvider.SetIconPadding(receptorText, (int)resources.GetObject("receptorText.IconPadding"));
+            receptorText.Name = "receptorText";
+            receptorText.ReadOnly = true;
+            toolTip1.SetToolTip(receptorText, resources.GetString("receptorText.ToolTip"));
             // 
             // searchButton
             // 
-            this.searchButton.Location = new System.Drawing.Point(512, 227);
-            this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(94, 29);
-            this.searchButton.TabIndex = 7;
-            this.searchButton.Text = "Buscar";
-            this.searchButton.UseVisualStyleBackColor = true;
-            this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
+            resources.ApplyResources(searchButton, "searchButton");
+            emptyErrorProvider.SetError(searchButton, resources.GetString("searchButton.Error"));
+            emptyErrorProvider.SetIconAlignment(searchButton, (ErrorIconAlignment)resources.GetObject("searchButton.IconAlignment"));
+            emptyErrorProvider.SetIconPadding(searchButton, (int)resources.GetObject("searchButton.IconPadding"));
+            searchButton.Name = "searchButton";
+            toolTip1.SetToolTip(searchButton, resources.GetString("searchButton.ToolTip"));
+            searchButton.UseVisualStyleBackColor = true;
+            searchButton.Click += searchButton_Click;
             // 
             // listButton
             // 
-            this.listButton.Location = new System.Drawing.Point(512, 44);
-            this.listButton.Name = "listButton";
-            this.listButton.Size = new System.Drawing.Size(94, 29);
-            this.listButton.TabIndex = 6;
-            this.listButton.Text = "Listar";
-            this.toolTip1.SetToolTip(this.listButton, "Apague los dispositivos que no forman parte del proceso.");
-            this.listButton.UseVisualStyleBackColor = true;
-            this.listButton.Click += new System.EventHandler(this.listButton_Click);
+            resources.ApplyResources(listButton, "listButton");
+            emptyErrorProvider.SetError(listButton, resources.GetString("listButton.Error"));
+            emptyErrorProvider.SetIconAlignment(listButton, (ErrorIconAlignment)resources.GetObject("listButton.IconAlignment"));
+            emptyErrorProvider.SetIconPadding(listButton, (int)resources.GetObject("listButton.IconPadding"));
+            listButton.Name = "listButton";
+            toolTip1.SetToolTip(listButton, resources.GetString("listButton.ToolTip"));
+            listButton.UseVisualStyleBackColor = true;
+            listButton.Click += listButton_Click;
             // 
             // apkText
             // 
-            this.apkText.Location = new System.Drawing.Point(133, 228);
-            this.apkText.Name = "apkText";
-            this.apkText.Size = new System.Drawing.Size(373, 27);
-            this.apkText.TabIndex = 5;
+            resources.ApplyResources(apkText, "apkText");
+            emptyErrorProvider.SetError(apkText, resources.GetString("apkText.Error"));
+            emptyErrorProvider.SetIconAlignment(apkText, (ErrorIconAlignment)resources.GetObject("apkText.IconAlignment"));
+            emptyErrorProvider.SetIconPadding(apkText, (int)resources.GetObject("apkText.IconPadding"));
+            apkText.Name = "apkText";
+            toolTip1.SetToolTip(apkText, resources.GetString("apkText.ToolTip"));
             // 
             // ipLabel
             // 
-            this.ipLabel.AutoSize = true;
-            this.ipLabel.Location = new System.Drawing.Point(27, 192);
-            this.ipLabel.Name = "ipLabel";
-            this.ipLabel.Size = new System.Drawing.Size(102, 20);
-            this.ipLabel.TabIndex = 0;
-            this.ipLabel.Text = "IP Dispositivo:";
+            resources.ApplyResources(ipLabel, "ipLabel");
+            emptyErrorProvider.SetError(ipLabel, resources.GetString("ipLabel.Error"));
+            emptyErrorProvider.SetIconAlignment(ipLabel, (ErrorIconAlignment)resources.GetObject("ipLabel.IconAlignment"));
+            emptyErrorProvider.SetIconPadding(ipLabel, (int)resources.GetObject("ipLabel.IconPadding"));
+            ipLabel.Name = "ipLabel";
+            toolTip1.SetToolTip(ipLabel, resources.GetString("ipLabel.ToolTip"));
+            // 
+            // packageText
+            // 
+            resources.ApplyResources(packageText, "packageText");
+            packageText.BackColor = SystemColors.Window;
+            packageText.BorderStyle = BorderStyle.None;
+            emptyErrorProvider.SetError(packageText, resources.GetString("packageText.Error"));
+            emptyErrorProvider.SetIconAlignment(packageText, (ErrorIconAlignment)resources.GetObject("packageText.IconAlignment"));
+            emptyErrorProvider.SetIconPadding(packageText, (int)resources.GetObject("packageText.IconPadding"));
+            packageText.Name = "packageText";
+            packageText.ReadOnly = true;
+            toolTip1.SetToolTip(packageText, resources.GetString("packageText.ToolTip"));
             // 
             // apkOpenFileDialog
             // 
-            this.apkOpenFileDialog.DefaultExt = "apk";
-            this.apkOpenFileDialog.Filter = "apk files (*.apk)|*.apk";
-            this.apkOpenFileDialog.FilterIndex = 2;
-            this.apkOpenFileDialog.Title = "Buscar Archivo APK";
+            apkOpenFileDialog.DefaultExt = "apk";
+            resources.ApplyResources(apkOpenFileDialog, "apkOpenFileDialog");
+            apkOpenFileDialog.FilterIndex = 2;
             // 
             // installButton
             // 
-            this.installButton.BackColor = System.Drawing.SystemColors.Window;
-            this.installButton.ForeColor = System.Drawing.Color.SeaGreen;
-            this.installButton.Location = new System.Drawing.Point(322, 515);
-            this.installButton.Name = "installButton";
-            this.installButton.Size = new System.Drawing.Size(165, 29);
-            this.installButton.TabIndex = 8;
-            this.installButton.Text = "Instalar Aplicación";
-            this.installButton.UseVisualStyleBackColor = false;
-            this.installButton.Click += new System.EventHandler(this.InstallButton_Click);
+            resources.ApplyResources(installButton, "installButton");
+            installButton.BackColor = SystemColors.Window;
+            emptyErrorProvider.SetError(installButton, resources.GetString("installButton.Error"));
+            installButton.ForeColor = Color.SeaGreen;
+            emptyErrorProvider.SetIconAlignment(installButton, (ErrorIconAlignment)resources.GetObject("installButton.IconAlignment"));
+            emptyErrorProvider.SetIconPadding(installButton, (int)resources.GetObject("installButton.IconPadding"));
+            installButton.Name = "installButton";
+            toolTip1.SetToolTip(installButton, resources.GetString("installButton.ToolTip"));
+            installButton.UseVisualStyleBackColor = false;
+            installButton.Click += InstallButton_Click;
             // 
             // cancelButton
             // 
-            this.cancelButton.Location = new System.Drawing.Point(777, 515);
-            this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(94, 29);
-            this.cancelButton.TabIndex = 9;
-            this.cancelButton.Text = "Cancelar";
-            this.cancelButton.UseVisualStyleBackColor = true;
-            this.cancelButton.Click += new System.EventHandler(this.CancelButton_Click);
+            resources.ApplyResources(cancelButton, "cancelButton");
+            emptyErrorProvider.SetError(cancelButton, resources.GetString("cancelButton.Error"));
+            emptyErrorProvider.SetIconAlignment(cancelButton, (ErrorIconAlignment)resources.GetObject("cancelButton.IconAlignment"));
+            emptyErrorProvider.SetIconPadding(cancelButton, (int)resources.GetObject("cancelButton.IconPadding"));
+            cancelButton.Name = "cancelButton";
+            toolTip1.SetToolTip(cancelButton, resources.GetString("cancelButton.ToolTip"));
+            cancelButton.UseVisualStyleBackColor = true;
+            cancelButton.Click += CancelButton_Click;
             // 
             // emptyErrorProvider
             // 
-            this.emptyErrorProvider.ContainerControl = this;
-            // 
-            // fileSystemWatcher1
-            // 
-            this.fileSystemWatcher1.EnableRaisingEvents = true;
-            this.fileSystemWatcher1.SynchronizingObject = this;
+            emptyErrorProvider.ContainerControl = this;
+            resources.ApplyResources(emptyErrorProvider, "emptyErrorProvider");
             // 
             // deviceOwnerButton
             // 
-            this.deviceOwnerButton.BackColor = System.Drawing.SystemColors.Window;
-            this.deviceOwnerButton.ForeColor = System.Drawing.Color.OrangeRed;
-            this.deviceOwnerButton.Location = new System.Drawing.Point(491, 515);
-            this.deviceOwnerButton.Name = "deviceOwnerButton";
-            this.deviceOwnerButton.Size = new System.Drawing.Size(279, 29);
-            this.deviceOwnerButton.TabIndex = 10;
-            this.deviceOwnerButton.Text = "Establecer Propietario de Dispositivo";
-            this.deviceOwnerButton.UseVisualStyleBackColor = false;
-            this.deviceOwnerButton.Click += new System.EventHandler(this.DeviceOwnerButton_Click);
+            resources.ApplyResources(deviceOwnerButton, "deviceOwnerButton");
+            deviceOwnerButton.BackColor = SystemColors.Window;
+            emptyErrorProvider.SetError(deviceOwnerButton, resources.GetString("deviceOwnerButton.Error"));
+            deviceOwnerButton.ForeColor = Color.OrangeRed;
+            emptyErrorProvider.SetIconAlignment(deviceOwnerButton, (ErrorIconAlignment)resources.GetObject("deviceOwnerButton.IconAlignment"));
+            emptyErrorProvider.SetIconPadding(deviceOwnerButton, (int)resources.GetObject("deviceOwnerButton.IconPadding"));
+            deviceOwnerButton.Name = "deviceOwnerButton";
+            toolTip1.SetToolTip(deviceOwnerButton, resources.GetString("deviceOwnerButton.ToolTip"));
+            deviceOwnerButton.UseVisualStyleBackColor = false;
+            deviceOwnerButton.Click += DeviceOwnerButton_Click;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel1.Controls.Add(this.connectCheck);
-            this.panel1.Controls.Add(this.deviceOwnerCheck);
-            this.panel1.Controls.Add(this.installCheck);
-            this.panel1.Controls.Add(this.searchCheck);
-            this.panel1.Controls.Add(this.listCheck);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Location = new System.Drawing.Point(11, 12);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(229, 353);
-            this.panel1.TabIndex = 11;
+            resources.ApplyResources(panel1, "panel1");
+            panel1.BackColor = SystemColors.ControlLight;
+            panel1.Controls.Add(connectCheck);
+            panel1.Controls.Add(deviceOwnerCheck);
+            panel1.Controls.Add(installCheck);
+            panel1.Controls.Add(searchCheck);
+            panel1.Controls.Add(listCheck);
+            panel1.Controls.Add(label4);
+            emptyErrorProvider.SetError(panel1, resources.GetString("panel1.Error"));
+            emptyErrorProvider.SetIconAlignment(panel1, (ErrorIconAlignment)resources.GetObject("panel1.IconAlignment"));
+            emptyErrorProvider.SetIconPadding(panel1, (int)resources.GetObject("panel1.IconPadding"));
+            panel1.Name = "panel1";
+            toolTip1.SetToolTip(panel1, resources.GetString("panel1.ToolTip"));
             // 
             // connectCheck
             // 
-            this.connectCheck.AutoCheck = false;
-            this.connectCheck.AutoSize = true;
-            this.connectCheck.Location = new System.Drawing.Point(27, 113);
-            this.connectCheck.Name = "connectCheck";
-            this.connectCheck.Size = new System.Drawing.Size(168, 24);
-            this.connectCheck.TabIndex = 17;
-            this.connectCheck.Text = "Conectar Dispositivo";
-            this.connectCheck.UseVisualStyleBackColor = true;
+            resources.ApplyResources(connectCheck, "connectCheck");
+            connectCheck.AutoCheck = false;
+            emptyErrorProvider.SetError(connectCheck, resources.GetString("connectCheck.Error"));
+            emptyErrorProvider.SetIconAlignment(connectCheck, (ErrorIconAlignment)resources.GetObject("connectCheck.IconAlignment"));
+            emptyErrorProvider.SetIconPadding(connectCheck, (int)resources.GetObject("connectCheck.IconPadding"));
+            connectCheck.Name = "connectCheck";
+            toolTip1.SetToolTip(connectCheck, resources.GetString("connectCheck.ToolTip"));
+            connectCheck.UseVisualStyleBackColor = true;
             // 
             // deviceOwnerCheck
             // 
-            this.deviceOwnerCheck.AutoCheck = false;
-            this.deviceOwnerCheck.AutoSize = true;
-            this.deviceOwnerCheck.Location = new System.Drawing.Point(27, 289);
-            this.deviceOwnerCheck.Name = "deviceOwnerCheck";
-            this.deviceOwnerCheck.Size = new System.Drawing.Size(177, 24);
-            this.deviceOwnerCheck.TabIndex = 16;
-            this.deviceOwnerCheck.Text = "Establecer Propietario";
-            this.deviceOwnerCheck.UseVisualStyleBackColor = true;
+            resources.ApplyResources(deviceOwnerCheck, "deviceOwnerCheck");
+            deviceOwnerCheck.AutoCheck = false;
+            emptyErrorProvider.SetError(deviceOwnerCheck, resources.GetString("deviceOwnerCheck.Error"));
+            emptyErrorProvider.SetIconAlignment(deviceOwnerCheck, (ErrorIconAlignment)resources.GetObject("deviceOwnerCheck.IconAlignment"));
+            emptyErrorProvider.SetIconPadding(deviceOwnerCheck, (int)resources.GetObject("deviceOwnerCheck.IconPadding"));
+            deviceOwnerCheck.Name = "deviceOwnerCheck";
+            toolTip1.SetToolTip(deviceOwnerCheck, resources.GetString("deviceOwnerCheck.ToolTip"));
+            deviceOwnerCheck.UseVisualStyleBackColor = true;
             // 
             // installCheck
             // 
-            this.installCheck.AutoCheck = false;
-            this.installCheck.AutoSize = true;
-            this.installCheck.Location = new System.Drawing.Point(27, 229);
-            this.installCheck.Name = "installCheck";
-            this.installCheck.Size = new System.Drawing.Size(153, 24);
-            this.installCheck.TabIndex = 15;
-            this.installCheck.Text = "Instalar Aplicación";
-            this.installCheck.UseVisualStyleBackColor = true;
+            resources.ApplyResources(installCheck, "installCheck");
+            installCheck.AutoCheck = false;
+            emptyErrorProvider.SetError(installCheck, resources.GetString("installCheck.Error"));
+            emptyErrorProvider.SetIconAlignment(installCheck, (ErrorIconAlignment)resources.GetObject("installCheck.IconAlignment"));
+            emptyErrorProvider.SetIconPadding(installCheck, (int)resources.GetObject("installCheck.IconPadding"));
+            installCheck.Name = "installCheck";
+            toolTip1.SetToolTip(installCheck, resources.GetString("installCheck.ToolTip"));
+            installCheck.UseVisualStyleBackColor = true;
             // 
             // searchCheck
             // 
-            this.searchCheck.AutoCheck = false;
-            this.searchCheck.AutoSize = true;
-            this.searchCheck.Location = new System.Drawing.Point(27, 171);
-            this.searchCheck.Name = "searchCheck";
-            this.searchCheck.Size = new System.Drawing.Size(148, 24);
-            this.searchCheck.TabIndex = 14;
-            this.searchCheck.Text = "Buscar Aplicación";
-            this.searchCheck.UseVisualStyleBackColor = true;
+            resources.ApplyResources(searchCheck, "searchCheck");
+            searchCheck.AutoCheck = false;
+            emptyErrorProvider.SetError(searchCheck, resources.GetString("searchCheck.Error"));
+            emptyErrorProvider.SetIconAlignment(searchCheck, (ErrorIconAlignment)resources.GetObject("searchCheck.IconAlignment"));
+            emptyErrorProvider.SetIconPadding(searchCheck, (int)resources.GetObject("searchCheck.IconPadding"));
+            searchCheck.Name = "searchCheck";
+            toolTip1.SetToolTip(searchCheck, resources.GetString("searchCheck.ToolTip"));
+            searchCheck.UseVisualStyleBackColor = true;
             // 
             // listCheck
             // 
-            this.listCheck.AutoCheck = false;
-            this.listCheck.AutoSize = true;
-            this.listCheck.Location = new System.Drawing.Point(27, 57);
-            this.listCheck.Name = "listCheck";
-            this.listCheck.Size = new System.Drawing.Size(150, 24);
-            this.listCheck.TabIndex = 13;
-            this.listCheck.Text = "Listar Dispositivos";
-            this.listCheck.UseVisualStyleBackColor = true;
+            resources.ApplyResources(listCheck, "listCheck");
+            listCheck.AutoCheck = false;
+            emptyErrorProvider.SetError(listCheck, resources.GetString("listCheck.Error"));
+            emptyErrorProvider.SetIconAlignment(listCheck, (ErrorIconAlignment)resources.GetObject("listCheck.IconAlignment"));
+            emptyErrorProvider.SetIconPadding(listCheck, (int)resources.GetObject("listCheck.IconPadding"));
+            listCheck.Name = "listCheck";
+            toolTip1.SetToolTip(listCheck, resources.GetString("listCheck.ToolTip"));
+            listCheck.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(15, 13);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(164, 20);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Proceso de instalación";
+            resources.ApplyResources(label4, "label4");
+            emptyErrorProvider.SetError(label4, resources.GetString("label4.Error"));
+            emptyErrorProvider.SetIconAlignment(label4, (ErrorIconAlignment)resources.GetObject("label4.IconAlignment"));
+            emptyErrorProvider.SetIconPadding(label4, (int)resources.GetObject("label4.IconPadding"));
+            label4.Name = "label4";
+            toolTip1.SetToolTip(label4, resources.GetString("label4.ToolTip"));
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::CrediTVInstaller.Properties.Resources.creditv_logo;
-            this.pictureBox1.Location = new System.Drawing.Point(11, 371);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(229, 116);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
+            resources.ApplyResources(pictureBox1, "pictureBox1");
+            emptyErrorProvider.SetError(pictureBox1, resources.GetString("pictureBox1.Error"));
+            emptyErrorProvider.SetIconAlignment(pictureBox1, (ErrorIconAlignment)resources.GetObject("pictureBox1.IconAlignment"));
+            emptyErrorProvider.SetIconPadding(pictureBox1, (int)resources.GetObject("pictureBox1.IconPadding"));
+            pictureBox1.Image = Properties.Resources.creditv_logo;
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.TabStop = false;
+            toolTip1.SetToolTip(pictureBox1, resources.GetString("pictureBox1.ToolTip"));
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.logText);
-            this.groupBox2.Location = new System.Drawing.Point(247, 371);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(621, 119);
-            this.groupBox2.TabIndex = 13;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Registro ADB";
+            resources.ApplyResources(groupBox2, "groupBox2");
+            groupBox2.Controls.Add(logText);
+            emptyErrorProvider.SetError(groupBox2, resources.GetString("groupBox2.Error"));
+            emptyErrorProvider.SetIconAlignment(groupBox2, (ErrorIconAlignment)resources.GetObject("groupBox2.IconAlignment"));
+            emptyErrorProvider.SetIconPadding(groupBox2, (int)resources.GetObject("groupBox2.IconPadding"));
+            groupBox2.Name = "groupBox2";
+            groupBox2.TabStop = false;
+            toolTip1.SetToolTip(groupBox2, resources.GetString("groupBox2.ToolTip"));
             // 
             // logText
             // 
-            this.logText.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.logText.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.logText.Location = new System.Drawing.Point(7, 23);
-            this.logText.Multiline = true;
-            this.logText.Name = "logText";
-            this.logText.ReadOnly = true;
-            this.logText.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.logText.Size = new System.Drawing.Size(607, 91);
-            this.logText.TabIndex = 9;
-            // 
-            // toolTip1
-            // 
-            this.toolTip1.IsBalloon = true;
-            this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Warning;
-            this.toolTip1.ToolTipTitle = "Nota importante";
+            resources.ApplyResources(logText, "logText");
+            logText.BackColor = SystemColors.ControlLightLight;
+            logText.BorderStyle = BorderStyle.None;
+            emptyErrorProvider.SetError(logText, resources.GetString("logText.Error"));
+            emptyErrorProvider.SetIconAlignment(logText, (ErrorIconAlignment)resources.GetObject("logText.IconAlignment"));
+            emptyErrorProvider.SetIconPadding(logText, (int)resources.GetObject("logText.IconPadding"));
+            logText.Name = "logText";
+            logText.ReadOnly = true;
+            toolTip1.SetToolTip(logText, resources.GetString("logText.ToolTip"));
             // 
             // newButton
             // 
-            this.newButton.Location = new System.Drawing.Point(11, 515);
-            this.newButton.Name = "newButton";
-            this.newButton.Size = new System.Drawing.Size(94, 29);
-            this.newButton.TabIndex = 14;
-            this.newButton.Text = "Nuevo";
-            this.newButton.UseVisualStyleBackColor = true;
-            this.newButton.Click += new System.EventHandler(this.NewButton_Click);
+            resources.ApplyResources(newButton, "newButton");
+            emptyErrorProvider.SetError(newButton, resources.GetString("newButton.Error"));
+            emptyErrorProvider.SetIconAlignment(newButton, (ErrorIconAlignment)resources.GetObject("newButton.IconAlignment"));
+            emptyErrorProvider.SetIconPadding(newButton, (int)resources.GetObject("newButton.IconPadding"));
+            newButton.Name = "newButton";
+            toolTip1.SetToolTip(newButton, resources.GetString("newButton.ToolTip"));
+            newButton.UseVisualStyleBackColor = true;
+            newButton.Click += NewButton_Click;
+            // 
+            // fileSystemWatcher1
+            // 
+            fileSystemWatcher1.EnableRaisingEvents = true;
+            fileSystemWatcher1.SynchronizingObject = this;
+            // 
+            // toolTip1
+            // 
+            toolTip1.IsBalloon = true;
+            toolTip1.ToolTipIcon = ToolTipIcon.Warning;
+            toolTip1.ToolTipTitle = "Nota importante";
             // 
             // SetupForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Window;
-            this.CancelButton = this.cancelButton;
-            this.ClientSize = new System.Drawing.Size(880, 555);
-            this.Controls.Add(this.newButton);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.deviceOwnerButton);
-            this.Controls.Add(this.cancelButton);
-            this.Controls.Add(this.installButton);
-            this.Controls.Add(this.groupBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
-            this.Name = "SetupForm";
-            this.Text = "CreditTV Installer";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.emptyErrorProvider)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.ResumeLayout(false);
-
+            resources.ApplyResources(this, "$this");
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.Window;
+            CancelButton = cancelButton;
+            Controls.Add(newButton);
+            Controls.Add(groupBox2);
+            Controls.Add(pictureBox1);
+            Controls.Add(packageText);
+            Controls.Add(panel1);
+            Controls.Add(deviceOwnerButton);
+            Controls.Add(cancelButton);
+            Controls.Add(installButton);
+            Controls.Add(groupBox1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
+            Name = "SetupForm";
+            toolTip1.SetToolTip(this, resources.GetString("$this.ToolTip"));
+            Load += SetupForm_Load;
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)emptyErrorProvider).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)fileSystemWatcher1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -437,8 +473,6 @@
         private Button installButton;
         private Button cancelButton;
         private LinkLabel apkLink;
-        private Label label3;
-        private Label label2;
         private TextBox receptorText;
         private TextBox packageText;
         private ErrorProvider emptyErrorProvider;
@@ -460,5 +494,8 @@
         private Label label5;
         private ToolTip toolTip1;
         private Button newButton;
+        private Label label1;
+        private TextBox textBox1;
+        private Button button1;
     }
 }

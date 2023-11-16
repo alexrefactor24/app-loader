@@ -59,6 +59,14 @@ namespace CrediTVInstaller.handler
             return ExecuteAdbCommand();
         }
 
+        public string GetAppList()
+        {
+            arguments = @"shell pm list packages";
+            return ExecuteAdbCommand();
+        }
+
+
+
         public string InstallApk(string apkFileName)
         {
             arguments = @"install -r " + apkFileName;

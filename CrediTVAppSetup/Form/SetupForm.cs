@@ -35,7 +35,7 @@ namespace CrediTVInstaller
         private readonly string ERROR_EMPTY_MESSAGE = "Ingrese la dirección IP.";
         private void connectButton_Click(object sender, EventArgs e)
         {
-            if(ipText.Text == string.Empty)
+            if (ipText.Text == string.Empty)
                 emptyErrorProvider.SetError(ipText, ERROR_EMPTY_MESSAGE);
             else
             {
@@ -104,6 +104,34 @@ namespace CrediTVInstaller
             //
             installButton.Enabled = false;
             deviceOwnerButton.Enabled = false;
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SetupForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = String.Empty;
+            string apps = adbHandler.GetAppList();
+            textBox1.Text = apps;
+            listCheck.Checked = true;
+        }
+
+        private void devicesText_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
